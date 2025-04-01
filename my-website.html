@@ -1,69 +1,52 @@
+/* First Draft!!! */
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits</title>
+    <title>Retail Tech and Web Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Fruits</h1>
+        <h1>Welcome to our Store</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
     </header>
+    <selection id="items-display">
+        <p>Our Categories to view products. Select a category.</p>
+    </selection>
 
-    <section class="product-list">
-        <h2>Available Fruits</h2>
-        <div class="product-item">
-            <h3>Apple</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-        <div class="pruduct-item"></div>
-            <h3>Bananas</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-        <div class="product-item"></div>
-            <h3>Oranges</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-        <div class="product-item"></div>
-            <h3>Grapes</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-        <div class="product-item"></div>
-            <h3>Strawberries</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-        <div class="product-item"></div>
-            <h3>Kiwis</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: Out of Stock</p>
-    </div>
-            <div class="product-item"></div>
-            <h3>Blueberries</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
-        </div>
-            <div class="product-item"></div>
-            <h3>Avocados</h3>
-            <p>Location: Aisle 1</p>
-            <p>Stock Status: Out of Stock</p>
-    </div>
+    <section class="categories">
+        <a href="fruits.html" class="button-link">Fruits</a>
+
+        <button onclick = "showCategory('vegetables')">Vegetables</button>
+        <button onclick = "showCategory('dairy')">Dairy</button>
+        <button onclick = "showCategory('juices')">Juices</button>
+        <button onclick = "showCategory('deli')">Deli</button>
+        <button onclick = "showCategory('bakery')">Bakery</button>
     </section>
 
+    <selection id="interact">
+        <p>Thank you for Interacting</p>
+    </selection>
+    
     <footer>
-        <p>&copy; 2025 SM</p>
+        <p>&copy; 2025 S.M. Web</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        function showCategory(category) {
+            document.getElementById("product-display").innerHTML = `<h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2><p>Products coming soon...</p>`;
+        }
+    </script>
+    </body>
+    </html>
