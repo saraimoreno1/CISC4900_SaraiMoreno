@@ -1,52 +1,53 @@
-/* First Draft!!! */
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retail Tech and Web Solutions</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head>   
+
 <body>
     <header>
         <h1>Welcome to our Store</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="store.html">Home</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
     </header>
-    <selection id="items-display">
+
+    <section class="hero-image"></section>
+
+    <section id="items-display">
         <p>Our Categories to view products. Select a category.</p>
-    </selection>
-
-    <section class="categories">
-        <a href="fruits.html" class="button-link">Fruits</a>
-
-        <button onclick = "showCategory('vegetables')">Vegetables</button>
-        <button onclick = "showCategory('dairy')">Dairy</button>
-        <button onclick = "showCategory('juices')">Juices</button>
-        <button onclick = "showCategory('deli')">Deli</button>
-        <button onclick = "showCategory('bakery')">Bakery</button>
     </section>
 
-    <selection id="interact">
-        <p>Thank you for Interacting</p>
-    </selection>
-    
+    <section class="categories">
+        <a href="fruits.html" class="category-button">Fruits</a>
+        <a href="vegetables.html" class="category-button">Vegetables</a>
+        <a href="dairy.html" class="category-button">Dairy</a>
+        <a href="juices.html" class="category-button">Juices</a>
+        <a href="deli.html" class="category-button">Deli</a>
+        <a href="bakery.html" class="category-button">Bakery</a>
+    </section>
+
+    <section id="interact">
+        <p>Thank you for interacting.</p>
+    </section>
+
+    <div id="product-display"></div> 
+
     <footer>
-        <p>&copy; 2025 S.M. Web</p>
+        <p>&copy; 2025 Sarai Moreno. Web</p>
     </footer>
 
     <script>
         function showCategory(category) {
-            document.getElementById("product-display").innerHTML = `<h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2><p>Products coming soon...</p>`;
+            document.getElementById("product-display").innerHTML = 
+              `<h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2><p>Products coming soon...</p>`;
         }
     </script>
-    </body>
-    </html>
+</body>
+</html>
