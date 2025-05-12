@@ -24,49 +24,63 @@
         <div class="product-item">
             <h3>Apple</h3>
             <p>Location: Aisle 1</p>
-            <p>Stock Status: In Stock</p>
+            <p>Stock Status: In Stock
+            <p>Price: $2.99 /lb</p>
+            </p>
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Bananas</h3>
+            <h3>Banana</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: In Stock</p>
+            <p>Price: $.99 /lb</p>
+
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Oranges</h3>
+            <h3>Orange</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: In Stock</p>
+            <p>Price: $0.99 each</p>
+
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Grapes</h3>
+            <h3>Grape</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: In Stock</p>
+            <p>Price: $4.99 /lb</p>
+
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Strawberries</h3>
+            <h3>Strawberry</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: In Stock</p>
+            <p>Price: $5.99 each</p>
+
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Kiwis</h3>
+            <h3>Kiwi</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: Out of Stock</p>
+            <p>Price: $0.36 /lb</p>
+
         </div>
         <hr>
 
         <div class="product-item">
-            <h3>Blueberries</h3>
+            <h3>Blueberry</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: In Stock</p>
+            <p>Price: $3.99 /lb</p>
+
         </div>
         <hr>
 
@@ -74,6 +88,8 @@
             <h3>Avocados</h3>
             <p>Location: Aisle 1</p>
             <p>Stock Status: Out of Stock</p>
+            <p>Price: $2.50 /lb</p>
+
         </div>
 
     </section>
@@ -81,5 +97,42 @@
     <footer>
         <p>&copy; 2025 SM</p>
     </footer>
+<!-- Code injected by live-server -->
+<script>
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
